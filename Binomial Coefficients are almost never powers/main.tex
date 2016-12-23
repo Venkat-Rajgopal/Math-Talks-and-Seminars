@@ -1,0 +1,329 @@
+\documentclass[a4paper]{article}
+
+\usepackage{fullpage} % Package to use full page
+\usepackage{parskip} % Package to tweak paragraph skipping
+\usepackage{tikz} % Package for drawing
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{biblatex}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,tikz}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{geometry}
+\usepackage{fancybox} 
+\usepackage{tikz}
+\usepackage{bm}
+
+\newcommand{\divby}{\ \tikz \foreach \y in {0ex, 0.65ex, 1.3ex} \fill (0,\y) circle (0.5pt);\ }
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{claim}[2][Claim]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+
+\addbibresource{bibliography.bib} % Nodwch fod hwn yn wahanol i'r fersiwn Saesneg - er mwyn medu rhoi teitl Cymraeg i'r Cyferirnodau
+
+\title{Binomial coefficients are (almost) never powers}
+\author{Venkatramani Rajgopal\\
+\textit{Hochschule Mittweida, University of Applied Sciences}}
+\date{11 January, 2016}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+This is a epilogue to Bertrand's postulate on Binomial Coefficients. \\
+
+\begin{tcolorbox}
+\textbf{Bertrand’s postulate.} \\
+For every $n \geq 1$ there is some prime number $p$ with $n < p \leq 2n$.\\
+\end {tcolorbox}
+
+In 1892 J.Sylvester strengthened Bertrand’s postulate in the following way;
+
+\ovalbox {\textit{If $n\geq 2k$, then at least one of the numbers $n,n-1,....n-k+1$ has a prime divisor $p$ greater than $k$.} }\\
+
+Note that for \(n = 2k\) we obtain precisely Bertrand’s postulate. In 1934, Erdos gave a elementary Book Proof of Sylvester’s result, running
+along the lines of his proof of Bertrand’s postulate.\\
+
+\begin{tcolorbox}
+He mentioned an equivalent way of stating Sylvester’s theorem:\\
+The binomial coefficient,
+\[ {n\choose k}=\dfrac{n(n-1)...(n-k+1)}{k!}   \qquad (n\ge2k) \]
+always has a prime factor $p>k$. \\
+\end{tcolorbox}
+
+With this observation we analyse when is $n \choose k$ equal to power $m^l$. \\
+We see that there are infinitely many solutions for $k=l=2$, i.e., there are infinitely many solutions of $n \choose 2$ = $m^2$. \\
+We observe that if  $n \choose 2$ is a square, then so is $(2n-1)^2 \choose 2$. To see this, let $n(n-1) = 2m^2$. So by substitution we get
+
+$$(2n-1)^2((2n-1)^2-1) = (2n-1)^2 4n(n-1) = 2(2m(2n-1))^2.$$
+
+So we have:
+$${(2n-1)^2 \choose 2} = (2m(2n-1))^2 $$
+
+Beginning with $9 \choose 2$ = $6^2$ we thus obtain many solutions.
+The next one is $289 \choose 2$ = $204^2$. [\textit{by substituting n=9 we have} $(2n-1)^2 = (2*9-1)^2 = 289$ ] \\
+For $k=3$ it is known that $n \choose 3$ = $m^2$ has a unique solution with $n=50, m=140$.
+But for $k \geq 4$ and $l \geq 2$ we do not have any further solutions. Erdos proved this by the following argument:
+
+
+\section{Theorem}
+\begin{tcolorbox}
+\center The Equation $n\choose k$=$m^l$ has no integer solutions with 
+$l\ge2$ and $4\le k\le(n-4)$. 
+\end{tcolorbox}
+
+\begin{proof}
+We may assume $n\geq 2k$ since $n\choose k$ = $n\choose n-k$. If the theorem is false then it follows that $n\choose k$ = $m^l$
+
+This proof by contradiction proceeds in the below four steps. 
+\subsection{Step 1}
+By Sylvester's theorem,  ${n \choose k}$ has a prime factor $p>k$ of . We have that $n \choose k$ = $m^l$ which can be written as $$\frac{n(n-1).....(n-k+1) }{k(k-1).....1} = m^l $$   is divisible by $p$.
+Since $p>k$,then $p$ can't be a divisor of the denominator $k(k-1).....1$. Which implies that the numerator $n(n-1).....(n-k+1)$ is indeed divisible by $p$. So we have
+
+ $$ \frac {n(n-1).....(n-k+1)}{k(k-1).....1}=m^l \divby p 
+ \Rightarrow \frac {n(n-1).....(n-k+1)}{k(k-1).....1}=m^l \divby p^l $$
+
+Since  $p$ is not a divisor of $k(k-1).....1$ then we can write: 
+ $$ n(n-1).....(n-k+1)\divby p^l $$
+
+Only one of $ n-i \divby p^{l}$, since $l \geq 2$ we make the following observation
+
+\begin{equation}
+\boldsymbol {n\geq p^l > k^l \ge k^2}       
+\end{equation}
+
+
+\subsection{Step 2}
+We rewrite the $(n-j)$ factors of the numerator in the form:
+\begin{equation}
+\boldsymbol {(n-j)= a_j m_j^l} 
+\end{equation}
+Where $ 0 \leq j \leq k-1$ and  $a_j$ is not divisible by any $l$-th power. By \textbf{(Step 1)} we know that $a_j$ has only prime divisors less than or equal to $k$. 
+We want to show $a_i \neq a_j$ when $i \neq j$. We assume the opposite, that there exist  $ i, j$  such that $a_i = a_j$ and $i \neq j$, we can assume $i<j$ (otherwise $j>i$) .Then we have
+\begin{align*}
+\  i<j &\implies n-i > n-j  \\
+ &\implies a_i m_i^l > a_j m_j^l      \\
+ &\implies m_i^l > m_j^l \implies m_i > m_j \implies m_i \geq m_j+1
+\end{align*}
+
+
+  
+On the other hand: 
+\begin{equation}
+(0 \leq i,j \leq k-1 \text{  and  } i<j )\implies k > j-i = (n-i)-(n-j) = a_j(m_i^l - m_j^l) \geq a_j((m_j+1)^l-m_j^l) 
+\end{equation}
+Now :
+$$
+(m_j+1)^l- m_{j}^l = \sum_{k=0}^{l} {l \choose k} m_j^{l-k}-m_{j}^l= [{l\choose 0}m_{j}^l+{l\choose 1})m_{j}^{l-1}+ \dots +1] -m_{j}^l\\
+ > {l \choose 1}m^{l-1}= lm_{j}^{l-1}$$
+ 
+ Plugging the above inequality in (3) we conclude
+ \begin{equation}
+ k>a_j((m_j+1)^l-m_j^l)>la_{j}m_{j}^{l-1}
+ \end{equation}
+
+
+We know that $l \geq 2$, so:
+\begin {equation*}
+  (l/2) \geq 1 \implies (l-1)\geq (l/2) \implies m_j^{l-1} \geq m_j^{l/2} 
+\end{equation*}
+Since $j\leq k-1$ we can also write: 
+\begin{equation*}
+a_j lm_j^{l-1} \geq l(a_j m_j)^{l/2}= (n-j)^{1/2} \geq (n-(k-1))^{1/2} 
+\end{equation*}
+
+which leads to \begin{equation}l(a_j m_j)^{l/2} \geq l((n-(k-1))^{1/2}) \end {equation}. 
+
+From our assumption, $n \geq 2k \implies k \leq (n/2)\implies n-k+1 \geq n-n/2 +1 = n/2 +1$. Furthermore: 
+\begin{equation}
+(n-(k-1))^{1/2}) \geq (n/2 +1)^{1/2} \implies l((n-(k-1))^{1/2})) \geq l((n/2 +1)^{1/2})
+\end{equation}
+
+And since $l\geq 2$ we have $$l((n/2 +1)^{1/2}) > l (n/2)^{1/2} = (l^2 / 2)^{1/2} n^{1/2} = n^{1/2}$$
+
+Therefore we can say 
+\begin{equation}
+l((n/2 +1)^{1/2}) > n^{l/2}
+\end{equation}
+ Now combining equations 4, 5 , 6 and 7 we get:
+ \begin{align*}
+ k&>la_{j}m_{j}^{l-1}\\
+ & \geq l{(a_{j}m_{j})}^{1/2}\geq {(n-(k-1))}^{1/2}\\
+ &\geq n^{1/2}
+ \end{align*}
+
+which is a contradiction to $n>k^2$, so our assumption that there exist  $ i, j$  such that $a_i = a_j$ and $i \neq j$ is wrong and therefore  $a_i \neq a_j$ whenever $i \neq j$ i.e, $a_{j}$'s are all distinct.
+
+\subsection{Step 3}
+In this step we prove $a_i$'s are the integers 1,2,....k in some order.
+Since we know that they all are distinct, it suffices to prove that,
+
+\begin{center}
+ $a_0 a_1....a_{k-1}$ divides $k!$
+\end{center}
+
+Substituting  $n-j = a_j m_j^{l}$, from Equation 2, into the equation ${n \choose k} = m^l$, we obtain, 
+\begin{align*}
+n(n-1)\dots (n-k+1) & = a_0 m_0^{l} a_1 m_1^{l} ..... a_{k-1} m_{k-1}^{l-1}\\
+&=( a_0 a_1 ....a_{k-1}) (m_0 m_1....m_{k-1})^l \\ 
+&= k!m^l 
+\end{align*} 
+
+Now cancelling common factors of $m_0 m_1....m_{k-1}$ and $m$ yields, 
+\begin{equation}
+a_0 a_1 ....a_{k-1} u^l = k!v^l 
+\end{equation} 
+where $\gcd (u,v)=1$. We want to show that $v=1$. If $v \neq 1$ then it has a prime factor $p\leq k$. Equation (8) tells us that since $\gcd(u,v)=1$ and $u^l$ cannot be divisible by $p$ then  $a_0 a_1 ... a_{k-1}$ has to be divisible by $p$, so $p$ has to be less than or equal to $k$ and therefore $p$ appears somewhere in the product $k!=k(k-1) \dots 1$.\\
+
+ 
+By Legendre's Theorem we know that the exponent of $p$ in  $k!$ is $$\sum_{i \geq 1} \floor*{\frac{k}{p^i}} $$ 
+
+Since $n(n-1) \dots (n-(k-1))= a_{0}a_{1}\dots a_{k-1}{(m_{0}m_{1}\dots m_{k-1})}^l=k!m^l$ then $p$ also appears in the product $n(n-1) \dots (n-(k-1))$. Next we estimate the exponent of $p$ in this product.
+Let $i>0$ and let's assume that there are $s$ multiples $b_{1}<b_{2}<\dots <b_{s}$ of $p^i$  among $n,(n-1),\dots ,(n-(k-1))$ where $ 0\leq i \leq k-1$ and $0\leq s \leq k$, i.e $b_{s}=s\cdot p^i$, $b_{1}=1\cdot p^i$. Furthermore we have
+
+\begin{align*}
+b_s &= b_1 + b_s - b_1\\
+&= b_{1}+ p^i\cdot s-p^i\\
+&=b_{1}+(s-1)p^i
+\end{align*}
+Since  $b_{1}<b_{2}<\dots <b_{s}$ are multiples of $p^i$ among  $n,(n-1),\dots ,(n-(k-1))$ we have 
+$$(s-1)p^i = b_s - b_1 \leq n-(n-k+1) = k-1 \implies s= \frac{k-1}{p^i}+1$$
+which implies
+\begin{equation}
+s \leq \floor*{\frac{k-1}{p^i}} + 1 \leq \floor*{\frac{k}{p^i}} + 1
+\end{equation}
+
+So for each $i$ the number of multiples of $p^i$ among $n,...n-k+1$ and hence among the $a_j's$ is bounded by $ \floor*{\frac{k}{p^i}} + 1.$ \\
+
+This implies that the exponent of $p$ in $a_0 a_1....a_{k-1}$ is at most
+\begin{equation}
+\sum_{i=1}^{l-1} (\floor*{\frac{k}{p^i}} + 1)
+\end{equation}
+The argument is the same as in Legendre's thoerem the difference here is that the sum stops at $i=l-1$, since the $a_j's$ contain no $l$-th powers. Extracting $v^l$ from equation (8) we have
+$$v^l = \frac{a_0 a_1....a_{k-1} u^l}{k!}$$
+Knowing that the exponent of a fraction is the difference of exponents ($\frac{a^m}{a^n}=a^{m-n}$) we have the following estimation for the exponent of $v^l$ 
+
+\begin{align}
+ exp(v^l)=\sum_{i=1}^{l-1} (\floor*{\frac{k}{p^i}} + 1) - \sum_{i\geq1} \floor*{\frac{k}{p^i}}= \sum_{i=1}^{l-1} \floor*{\frac{k}{p^i}} - \sum_{i\geq1} \floor*{\frac{k}{p^i}} + \sum_{i=1}^{l-1} 1 \leq l-1
+\end{align}
+
+which is a contradiction to the fact that $v^l$ has exponent $l$. So our assumption that $v \neq 1$ is wrong. So $v=1$ and therefore $u=1$. So we can write $k!= a_{0}a_{1}\dots a_{k-1}$. Indeed, since $k \geq 4$ one of the $a_i's$ must be equal to $4$, i.e $a_i = 4 = 2^2 =2^l$, which is a contradiction to the fact that that $a_i's$  contain no squares.
+This suffices to settle the case $l=2$. So we now assume that $l \geq 3$
+
+\subsection{Step 4}
+
+Since $k \geq 4$ and $k! = a_0 a_1.....a_k-1$ then  for some $i_1, i_2, i_3$ we have $a_{i_1}=1, a_{i_2}=2, a_{i_3}=4,$ that is
+\begin{align*}
+n-i_1 & = a_{i1} m_1^{l} = m_1^{l}  \\
+n-i_2 &= a_{i2} m_2^{l} = 2m_2^{l}\\
+n-i_3 &= a_{i3} m_3^{l} = 4m_3^l
+\end{align*}
+
+We claim that $(n-i_2)^2 \neq (n-i_1)(n-i_3)$. Assume the opposite that,
+$(n-i_2)^2 = (n-i_1)(n-i_3)$ and let 
+\begin{align*}
+n-i_2&=b \\
+n-i_1 &= b-x \\
+n-i_3 &= b+y
+\end{align*}
+where $0 <|x|,|y|<k $. Hence we have
+\begin{align*}
+b^2 = (b-x)(b+y)  \implies  (y-x)b = xy
+\end{align*}
+where $x=y$ is not possible because in the contrary we would have 
+$$b^2=(b-x)(b+y)=(b-x)(b+x)=b^2-x^2 \implies x^2= 0$$
+which is not possible because $|x|>0$. By part \textbf{(1)}
+
+$|xy| = b|y-x| \geq b > n-k \geq k^2 \geq (k-1)^2 \geq |xy|$, which is incorrect. Therefore our assumption $(n-i_2)^2 = (n-i_1)(n-i_3)$ is incorrect. That means $(2\cdot m_2^{l})^2 \neq m_1^l \cdot 4\cdot m_3^l$.
+Dividing by 4 we have, $( m_2^{l}) \neq m_1^l m_3^l$ $\implies$ $m_2^{2} \neq m_1 m_3$. Without losing generality we assume $m_2^{2} > m_1 m_3$ (otherwise $m_2^{2} < m_1 m_{3} $) so we have $\implies m_2^{2} \geq m_1 m_3 +1$.
+
+Using the fact that  $n^2 - (n-k+1)^2=2(k-1)n - (k-1)^2$ we write
+
+\begin{align*}\label{ineq}
+  2(k-1)n &>2(k-1)n -(k-1)^2 \\ \nonumber
+  &= n^2 - (n-k+1)^2\\ \nonumber
+  &> (n-i_2)^2 - (n-i_1)(n-i_3) \\ \nonumber
+ &= (2m_2^{l})^2 - 4(m_1 m_3)^l\\ \nonumber
+ &=  4[m_2^{2l} - (m_1 m_3)^l] \\ \nonumber
+ &\geq 4[(m_1 m_3 + 1)^l - (m_1 m_3)^l] \\\nonumber
+ &\geq 4lm_1^{l-1} m_3^{l-1}
+\end{align*}
+
+Multiplying both sides by $m_1 m_3$ we have,
+\begin{equation}
+2(k-1)nm_1 m_3 > 4lm_1^{l} m_3^{l} = l(n-i_1)(n-i_3)
+> l(n-k+1)^2
+\end{equation}
+
+Plugging $l \geq 3$ at equation (1) we get
+\begin{equation}
+n>k^l\geq k^3 > 6k \implies k< \frac{n}{6}
+\end{equation}
+Having the above observation we keep estimating the right side of inequation (12)
+\begin{equation}
+ l(n-k+1)^2 > 3(n-\frac{n}{6})^2 >2n^{2}
+\end{equation}
+ 
+ Combination of (12) and (14) yieds
+ \begin{align*}
+ 2(k-1)n\cdot m_{1}\cdot m_{3}&>l{(n-k+1)}^2>2n^2
+ \end{align*}
+
+by dividing with $2n$ both sides we have
+\begin{align}
+(k-1)m_{1}m_{3}>n
+\end{align}
+
+Observe next that
+$$n-i = a_i m_i^l \implies n > a_i m_i^l $$
+taking $l$-th root of both sides  we have 
+\begin{equation*}
+n^{1/2}> a_i^{1/l}m_i 
+\end{equation*}
+So 
+
+\begin{align*}
+m_i \leq n^{1/l} \leq n^{1/3}  
+&\implies m_1 m_3 \leq n^{1/3}\cdot n^{1/3} = n^{2/3}
+\end{align*}
+
+And we obtain
+\begin{equation}
+m_1 m_3 \leq n^{2/3}
+\end{equation}
+Multiplying by $k$ both sides of (16) and using (15) we obtain
+
+\begin{align*}
+kn^{2/3} \geq km_1 m_3 &> (k-1)m_1 m_3 > n, \\
+\end{align*}
+by taking third power and dividing  with $n$ we have $n<k^3$ which is contradiction to equation to (12).
+\begin{flushleft}
+Which contradicts $n \geq k^3$. Therefore our assumption that $n \choose k$ = $m^l$ for $l \geq3 $ is wrong, so there is no solution to ${n\choose k}=m^l$ for $l\geq 3$ and $k\geq 4$.
+\end{flushleft}  
+  
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{latexcompanion} 
+ Martin Aigner, Günter M. Ziegler.   
+\textit{Proofs from the book. Fourth Edition}. 
+ Springer 2013
+\end{thebibliography}
+
+\end{document}
