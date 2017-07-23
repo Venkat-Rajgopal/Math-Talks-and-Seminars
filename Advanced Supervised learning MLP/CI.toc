@@ -1,0 +1,18 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Preliminaries}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Multi Layer Perceptrons}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Supervised Learning}{9}{0}{2}
+\beamer@subsectionintoc {2}{3}{Back Propagation algorithm}{13}{0}{2}
+\beamer@subsectionintoc {2}{4}{Gradient Descent}{18}{0}{2}
+\beamer@subsectionintoc {2}{5}{Learning by pattern vs learning by epoch}{31}{0}{2}
+\beamer@sectionintoc {3}{Global Adaptive Techniques}{32}{0}{3}
+\beamer@subsectionintoc {3}{1}{Steepest descent}{32}{0}{3}
+\beamer@subsectionintoc {3}{2}{Conjugate gradient method}{37}{0}{3}
+\beamer@sectionintoc {4}{Local adaptive techniques}{41}{0}{4}
+\beamer@subsectionintoc {4}{1}{Delta bar delta rule}{41}{0}{4}
+\beamer@subsectionintoc {4}{2}{SuperSAB}{45}{0}{4}
+\beamer@subsectionintoc {4}{3}{Quickprop Algorithm}{47}{0}{4}
+\beamer@subsectionintoc {4}{4}{Rprop}{55}{0}{4}
+\beamer@sectionintoc {5}{Test Results}{62}{0}{5}

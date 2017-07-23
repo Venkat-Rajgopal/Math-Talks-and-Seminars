@@ -1,0 +1,16 @@
+\BOOKMARK [2][]{Outline0.1}{Introduction}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Preliminaries}{}% 2
+\BOOKMARK [3][]{Outline0.2.1.4}{Multi Layer Perceptrons}{Outline0.2}% 3
+\BOOKMARK [3][]{Outline0.2.2.9}{Supervised Learning}{Outline0.2}% 4
+\BOOKMARK [3][]{Outline0.2.3.13}{Back Propagation algorithm}{Outline0.2}% 5
+\BOOKMARK [3][]{Outline0.2.4.18}{Gradient Descent}{Outline0.2}% 6
+\BOOKMARK [3][]{Outline0.2.5.31}{Learning by pattern vs learning by epoch}{Outline0.2}% 7
+\BOOKMARK [2][]{Outline0.3}{Global Adaptive Techniques}{}% 8
+\BOOKMARK [3][]{Outline0.3.1.32}{Steepest descent}{Outline0.3}% 9
+\BOOKMARK [3][]{Outline0.3.2.37}{Conjugate gradient method}{Outline0.3}% 10
+\BOOKMARK [2][]{Outline0.4}{Local adaptive techniques}{}% 11
+\BOOKMARK [3][]{Outline0.4.1.41}{Delta bar delta rule}{Outline0.4}% 12
+\BOOKMARK [3][]{Outline0.4.2.45}{SuperSAB}{Outline0.4}% 13
+\BOOKMARK [3][]{Outline0.4.3.47}{Quickprop Algorithm}{Outline0.4}% 14
+\BOOKMARK [3][]{Outline0.4.4.55}{Rprop}{Outline0.4}% 15
+\BOOKMARK [2][]{Outline0.5}{Test Results}{}% 16
