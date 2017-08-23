@@ -1,0 +1,11 @@
+\BOOKMARK [2][]{Outline0.1}{Introduction}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Classical regression in time series context}{}% 2
+\BOOKMARK [2][]{Outline0.3}{Preliminaries}{}% 3
+\BOOKMARK [3][]{Outline0.3.1.11}{White noise and Moving averages}{Outline0.3}% 4
+\BOOKMARK [3][]{Outline0.3.2.16}{Stationary Series}{Outline0.3}% 5
+\BOOKMARK [3][]{Outline0.3.3.23}{Autocorrelation function \(ACF\)}{Outline0.3}% 6
+\BOOKMARK [3][]{Outline0.3.4.25}{Partial - Autocorrelation function \(PACF\)}{Outline0.3}% 7
+\BOOKMARK [2][]{Outline0.4}{First-order Autoregression Model \(AR\(1\)\)}{}% 8
+\BOOKMARK [2][]{Outline0.5}{Moving Average \(MA\) model}{}% 9
+\BOOKMARK [2][]{Outline0.6}{ARMA model}{}% 10
+\BOOKMARK [2][]{Outline0.7}{Fitting the model \(Summary\)}{}% 11

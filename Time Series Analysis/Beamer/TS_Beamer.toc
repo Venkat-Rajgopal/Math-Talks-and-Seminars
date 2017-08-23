@@ -1,0 +1,13 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Classical regression in time series context}{9}{0}{2}
+\beamer@sectionintoc {3}{Preliminaries}{11}{0}{3}
+\beamer@subsectionintoc {3}{1}{White noise and Moving averages}{11}{0}{3}
+\beamer@subsectionintoc {3}{2}{Stationary Series}{16}{0}{3}
+\beamer@subsectionintoc {3}{3}{Autocorrelation function (ACF)}{23}{0}{3}
+\beamer@subsectionintoc {3}{4}{Partial - Autocorrelation function (PACF)}{25}{0}{3}
+\beamer@sectionintoc {4}{First-order Autoregression Model (AR(1))}{27}{0}{4}
+\beamer@sectionintoc {5}{Moving Average (MA) model}{34}{0}{5}
+\beamer@sectionintoc {6}{ARMA model}{37}{0}{6}
+\beamer@sectionintoc {7}{Fitting the model (Summary)}{38}{0}{7}
